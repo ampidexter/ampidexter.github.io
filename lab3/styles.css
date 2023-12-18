@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px; /* Увеличим базовый размер шрифта */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+header h1 a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 50px;
+    transition: color 0.3s ease;
+}
+header h1 a:hover{
+    color: #FFD700; /* Измените на желаемый цвет при наведении */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin-right: 20px;
+    text-transform: uppercase; /* Делаем текст заглавными буквами */
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 23px; /* Увеличим размер шрифта для ссылок в меню */
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #FFD700; 
+}
+
+.holy-grail {
+	min-height: 100vh;
+}
+
+.holy-grail,
+.body {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+}
+
+.sidebar-1 {
+    order: -1;
+    background-color: #e6e6e6;
+    padding: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.sidebar-2 {
+    background-color: #e6e6e6;
+    padding: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.sidebar-1 a{
+    text-decoration: none;
+    color: #777777;
+}
+
+.sidebar-1 a:hover{
+    color: black; 
+}
+
+
+.sidebar-1 h2 {
+    font-size: 18px; 
+    margin-bottom: 10px;
+    text-transform: uppercase; 
+}
+
+.sidebar-1 ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.sidebar-1 ul li {
+    margin-bottom: 8px;
+}
+
+.sidebar-1 img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+
+.sidebar-2 a{
+    text-decoration: none;
+    color: #777777;
+}
+
+.sidebar-2 a:hover{
+    color: black; 
+}
+
+
+.sidebar-2 h2 {
+    font-size: 18px; 
+    margin-bottom: 10px;
+    text-transform: uppercase; 
+}
+
+.sidebar-2 ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.sidebar-2 ul li {
+    margin-bottom: 8px;
+}
+
+.content {
+    flex: 1 1 auto;
+    padding: 20px;
+}
+
+.content img {
+    display: block; 
+    margin: 0 auto; 
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.list{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.content h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .body{
+        flex-direction: row;
+    }
+
+    .hg-sidebar {
+		flex: 0 0 260px;
+	}
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
