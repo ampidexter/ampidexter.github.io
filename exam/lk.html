@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Пешеходные маршруты Москвы</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger bg-gradient">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">
+          <img src="images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          Пешеходные маршруты Москвы
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="lk.html">Личный кабинет</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="container my-5">
+      <h2 class="mb-4">Личный кабинет</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Название</th>
+            <th scope="col">Описание</th>
+            <th scope="col">Основные объекты</th>
+            <th scope="col">Выбор</th>
+          </tr>
+        </thead>
+        <tbody id="routesTableBody">
+
+        </tbody>
+      </table>
+    </section>  
+  </main>
+
+  <footer class="bg-danger bg-gradient text-white text-center py-3">
+    <div class="container">
+      <p>&copy 2023 Пешеходные маршруты Москвы</p>
+      <p>Email: support@pmm.ru</p>
+    </div>
+  </footer>
+      
+  <script src="main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

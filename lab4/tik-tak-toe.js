@@ -13,6 +13,16 @@ function checkFull() {
     return true;
 }
 
+function checkWin(){
+    let cells = document.querySelectorAll(".cell");
+    for (let i = 0; i < 3; i++){
+        if (cells[i*3].textContent == "") continue;
+        for (let j = 0; j < 3; j++){
+
+        }
+    }
+}
+
 function proccessClick(eventObj){
     let cell = eventObj.target;
     if (gameOver) {

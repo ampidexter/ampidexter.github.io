@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Пешеходные маршруты Москвы</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger bg-gradient">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">
+          <img src="images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+          Пешеходные маршруты Москвы
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Личный кабинет</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="container my-5">
+        <h2 class="mb-4">Открой Москву шаг за шагом</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <img src="images/main-image.jpeg" class="img-fluid rounded card-img" alt="Изображение компании">
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Пешеходные маршруты Москвы</h5>
+                <p class="card-text">Мы - ваш проводник в мир удивительных пешеходных маршрутов по Москве. Мы создаем уникальные путешествия, которые помогут вам увидеть столицу с новой, удивительной стороны. Наша команда специализируется на разработке индивидуальных маршрутов, открывающих множество удивительных локаций, малоизвестных историй и красивейших уголков города.</p>
+                <p>Преимущества:</p>
+                    <ol>
+                        <li>Персонализированные маршруты: Мы адаптируем маршруты под ваши интересы, учитывая предпочтения и характер путешественника.</li>
+                        <li>Лучшие гиды: Наши профессиональные гиды - это настоящие эксперты в истории, культуре и тайнах Москвы.</li>
+                        <li>Интерактивные впечатления: Мы стремимся создать не просто тур, а настоящее погружение в мир истории и культуры города, используя инновационные подходы.</li>
+                        <li>Гарантированное удовольствие: Мы гарантируем вам удовольствие от каждого маршрута и позитивные эмоции от каждого шага по Москве.</li>
+                    </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container my-5" id="list_route">
+        <h2 class="mb-4">Список пешеходных маршрутов</h2>
+        <!--
+        <div class="row">
+          <div class="col-md-6 mb-1">
+            <input type="text" id="searchInput" class="form-control" placeholder="Поиск по названию маршрута">
+          </div>
+          <div class="col-md-6">
+            <div class="dropdown">
+              <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Основной объект
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        -->
+
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Название</th>
+              <th scope="col">Описание</th>
+              <th scope="col">Основные объекты</th>
+              <th scope="col">Выбор</th>
+            </tr>
+          </thead>
+          <tbody id="routesTableBody">
+
+          </tbody>
+        </table>
+    
+        <div class="pagination-container">
+        <ul class="pagination justify-content-center" id="pagination">
+            
+        </ul>
+        </div>
+    </section>
+
+    <section class="container my-5" id="guidesSection" style="display: none;">
+      <h2 class="mb-4">Список гидов</h2>
+      <!--
+      <form id="searchForm">
+        <div class="row">
+          <div class="col-md-4">
+            <label for="languageSelect" class="form-label">Знание языков:</label>
+            <select id="languageSelect" class="form-select">
+              <option value="">Выберите язык</option>
+
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label for="experienceMin" class="form-label">Минимальный опыт работы (лет):</label>
+            <input type="number" id="experienceMin" class="form-control" min="0">
+          </div>
+          <div class="col-md-4">
+            <label for="experienceMax" class="form-label">Максимальный опыт работы (лет):</label>
+            <input type="number" id="experienceMax" class="form-control" min="0">
+          </div>
+        </div>
+        
+      </form>
+      -->
+      <table class="table table-bordered" id="guidesTable">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">ФИО</th>
+            <th scope="col">Язык</th>
+            <th scope="col">Опыт работы (лет)</th>
+            <th scope="col">Стоимость услуг (руб/час)</th>
+            <th scope="col">Выбор</th>
+          </tr>
+        </thead>
+        <tbody id="guidesTableBody">
+
+        </tbody>
+      </table>
+    </section>
+
+    <button id="bookingButton" style="display: none;" class="btn btn-danger col-4 offset-4 my-4">Оформить заявку</button>
+  </main>
+
+  <footer class="bg-danger bg-gradient text-white text-center py-3">
+    <div class="container">
+      <p>&copy 2023 Пешеходные маршруты Москвы</p>
+      <p>Email: support@pmm.ru</p>
+    </div>
+  </footer>
+      
+  <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="bookingModalLabel">Оформление заявки</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Имя гида: <span id="guideInfo"></span></p>
+          <p>Название маршрута: <span id="routeInfo"></span></p>
+          <label for="tourDate">Дата экскурсии:</label>
+          <input type="date" id="tourDate" name="tourDate"><br><br>
+          <label for="startTime">Время начала экскурсии:</label>
+          <input type="time" id="startTime" name="startTime" min="09:00" max="23:00" step="1800"><br><br>
+          <label for="hoursNumber">Длительность экскурсии:</label>
+          <select id="hoursNumber" name="hoursNumber">
+            <option value="1">1 час</option>
+            <option value="2">2 часа</option>
+            <option value="3">3 часа</option>
+          </select><br><br>
+          <label for="numberOfVisitors">Количество человек в группе:</label>
+          <input type="number" id="numberOfVisitors" name="numberOfVisitors" min="1" max="20"><br><br>
+          <label>
+            <input type="checkbox" id="fastGuide" name="fastGuide"> Быстрый выезд гида
+          </label><br><br>
+          <label>
+            <input type="checkbox" id="transfer" name="transfer"> Трансфер до метро после экскурсии
+          </label>
+        </div>
+        <hr>
+        <div id="priceElement">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отменить</button>
+          <button type="button" class="btn btn-danger" onclick="submitBooking()">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+      
+  <script src="main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

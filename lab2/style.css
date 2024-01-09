@@ -43,7 +43,7 @@ input, textarea, select {
 
 
 .login-form {
-    background: url('background.jpg') center/cover no-repeat fixed;
+    background: url('background.jpg') center/cover fixed;
     max-width: 300px;
     margin: 0 auto;
     background-color: #fff;
